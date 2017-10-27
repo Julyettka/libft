@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imelnych <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,28 +11,30 @@
 /* ************************************************************************** */
 
 /*
-** The memcpy() function copies n bytes from memory area src to memory area dst.
-** If dst and src overlap, behavior is undefined.  Applications in which dst
-** and src might overlap should use memmove(3) instead.
-** RETURN VALUES
-** The memcpy() function returns the original value of dst.
+** Copy byte string fron src to dst. The two strings may overlap; the copy is
+** always done in a non-destructive manner. Returns the original value of dst.
 */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int 	i;
-	char 	*d;
 	char 	*s;
+	char 	*d;
+	int 	i;
 
 	i = 0;
 	d = (char*)dst;
 	s = (char*)src;
-	while (i < n)
+	if (s > d)
+		return(ft_memcpy(d, s, len));
+	else
 	{
-		d[i] = s[i];
-		i++;
+		while (len)
+		{
+			d[len] = s[len];
+			len--;
+		}
 	}
 	return (d);
 }

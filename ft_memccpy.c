@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imelnych <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,28 +11,30 @@
 /* ************************************************************************** */
 
 /*
-** The memcpy() function copies n bytes from memory area src to memory area dst.
-** If dst and src overlap, behavior is undefined.  Applications in which dst
-** and src might overlap should use memmove(3) instead.
-** RETURN VALUES
-** The memcpy() function returns the original value of dst.
+** The memccpy() function copies bytes from string src to string dst.  If
+** the character c (as converted to an unsigned char) occurs in the string
+** src, the copy stops and a pointer to the byte after the copy of c in the
+** string dst is returned.  Otherwise, n bytes are copied, and a NULL
+** pointer is returned.
 */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	int 	i;
-	char 	*d;
-	char 	*s;
+	unsigned char	*s;
+	unsigned char	*d;
+	int 			i;
 
+	s = ((unsigned char*)src);
+	d = ((unsigned char*)dst);
 	i = 0;
-	d = (char*)dst;
-	s = (char*)src;
 	while (i < n)
 	{
 		d[i] = s[i];
+		if (s[i] == (unsigned char)c)
+			return (d + i + 1);
 		i++;
 	}
-	return (d);
+	return (NULL);
 }
