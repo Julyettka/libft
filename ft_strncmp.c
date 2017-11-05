@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 09:15:55 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/29 15:19:00 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/05 14:51:19 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*str1;
 	unsigned char	*str2;
 

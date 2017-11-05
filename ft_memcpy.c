@@ -6,7 +6,7 @@
 /*   By: imelnych <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/17 10:53:58 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/27 20:48:26 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/05 14:50:40 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int 	i;
+	size_t 	i;
 	char 	*d;
 	char 	*s;
 

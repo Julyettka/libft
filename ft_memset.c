@@ -6,7 +6,7 @@
 /*   By: imelnych <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/17 10:30:17 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/27 10:31:41 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/05 14:51:00 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (i < len)

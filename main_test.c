@@ -3,8 +3,13 @@
 //#include "ft_putchar.c"
 #include "ft_tolower.c"
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
+	int ar;
+	char **argum;
+
+	ar = argc;
+	argum = argv;
 	// ft_tolower
 	int ft_tolower(int c);
 	    int	x;

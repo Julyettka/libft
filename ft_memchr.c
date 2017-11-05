@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 11:58:03 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/18 15:28:46 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/05 14:49:38 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int 			i;
+	size_t 			i;
 	unsigned char 	*str;
 
 	i = 0;

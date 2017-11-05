@@ -1,15 +1,21 @@
-NAME = libft.a
-SRC = *c *.h
+TARG = libft.a
+EXCLUDES = main_test.c
+#escape doens't work
+SRC := $(filter-out $(EXCLUDES), *.c)
+DEP = *.h
 FLAGS = -Wall -Wextra -Werror
-ODIR = ./obj
+ODIR = ./obj/
 
-$(NAME):
+# Object compilation
+compile:
 	gcc $(FLAGS) -c $(SRC)
+	mkdir $(ODIR)
+	mv *.o $(ODIR)
 
-clean: 
-	rm -f *.o
+clean:
+	rm -r ./obj/
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(TARG)
 
 re: fclean all

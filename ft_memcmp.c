@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 10:05:39 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/20 09:50:08 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/05 14:50:14 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int 			i;
+	size_t 			i;
 	unsigned char 	*str1;
 	unsigned char 	*str2;
 
@@ -32,7 +32,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);
 		else
-			i++;	
+			i++;
 	}
 	return (0);
 }
