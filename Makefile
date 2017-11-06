@@ -21,5 +21,6 @@ fclean: clean
 re: fclean all
 
 t:
-	gcc -o test $(TEST)
+	gcc -o test ./tests/$(TEST)
 	./test
+
