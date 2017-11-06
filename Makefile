@@ -1,21 +1,25 @@
 TARG = libft.a
-EXCLUDES = main_test.c
-#escape doens't work
-SRC := $(filter-out $(EXCLUDES), *.c)
-DEP = *.h
+SRC = *.c *.h
 FLAGS = -Wall -Wextra -Werror
 ODIR = ./obj/
+TEST = main_test.c
 
 # Object compilation
-compile:
+$(TARG):
 	gcc $(FLAGS) -c $(SRC)
-	mkdir $(ODIR)
-	mv *.o $(ODIR)
+	mkdir obj
+	mv *.o ./obj/
+	ar rc $(TARG) ./obj/*.o
+	ranlib $(TARG)
 
 clean:
-	rm -r ./obj/
+	rm -r $(ODIR)
 
 fclean: clean
 	rm -f $(TARG)
 
 re: fclean all
+
+t:
+	gcc -o test $(TEST)
+	./test

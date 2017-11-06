@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 10:05:36 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/29 12:25:44 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/05 23:43:58 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	i = 0;
 	str1 = (unsigned char*)s1;
 	str2 = (unsigned char*)s2;
-	while (str1[i] != '\0' || str2[i] != '\0')
+	while (str1[i] || str2[i])
 	{
 		if (str1[i] == str2[i])
 			i++;

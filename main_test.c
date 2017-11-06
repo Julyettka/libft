@@ -2,9 +2,11 @@
 
 //#include "ft_putchar.c"
 #include "ft_tolower.c"
+#include "ft_strcmp.c"
 
 int main(int argc, char *argv[])
 {
+
 	int ar;
 	char **argum;
 
@@ -12,18 +14,24 @@ int main(int argc, char *argv[])
 	argum = argv;
 	// ft_tolower
 	int ft_tolower(int c);
-	    int	x;
-	    int y;
+    int	x;
+    int y;
 
-	    x = 130;
-	    y = 67;
-	    if (x == ft_tolower(x))
-	    	puts("ft_tolower\tOK");
-	    else if(x != ft_tolower(x))
-	    	printf ("ft_tolower\tFAIL with input %d\n", x);
-	    if (y + 32 == ft_tolower(y))
-			puts("ft_tolower\tOK");
-		else
-	    	printf ("ft_tolower\tFAIL with input %d\n", y);
+    x = 130;
+    y = 67;
+    if (x == ft_tolower(x) && y + 32 == ft_tolower(y))
+    	puts("User: ft_tolower\tOK\tOK");
+	else
+    	printf ("User: ft_tolower\tFAIL with input x = %d\n, y = %d\n", x, y);
+
+	// ft_strcmp
+	const char *str1;
+	const char *str2;
+	str1 = "abcdef";
+	str2 = "abcde\200";
+	printf("User: ft_strcmp\t %d\n", ft_strcmp(str1, str2));
+	printf("Original: strcmp\t %d\n", strcmp(str1, str2));
+
+
 	return (0);
 }
