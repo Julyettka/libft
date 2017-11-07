@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-//#include "../ft_putchar.c"
+#include "../ft_putchar.c"
 #include "../ft_tolower.c"
 #include "../ft_strcmp.c"
 #include "../ft_isdelim.c"
@@ -10,6 +10,9 @@
 #include "../ft_atoi.c"
 #include "../ft_strlen.c"
 #include "../ft_memccpy.c"
+#include "../ft_strtrim.c"
+#include "../ft_strnew.c"
+#include "../ft_bzero.c"
 
 int	ft_atoi(const char *str);
 
@@ -70,5 +73,12 @@ int main(int argc, char *argv[])
 	printf("User: ft_atoi\t %d\n", ft_atoi(d));
 	printf("Original: atoi\t %d\n", atoi(d));
 
+	// ft_strtrim
+	char *s3;
+	char *s4;
+	s3  = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
+	printf("User: ft_strtrim %s\n", ft_strtrim(s3));
+	s4 = "  \t \t \n   \n\n\n\t";
+	printf("User: ft_strtrim %s\n", ft_strtrim(s4));
 	return (0);
 }
