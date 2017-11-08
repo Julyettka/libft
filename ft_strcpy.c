@@ -9,6 +9,7 @@
 /*   Updated: 2017/10/27 20:40:57 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /*
 ** The stpcpy() and strcpy() functions copy the string src to dst (including
 ** the terminating `\0' character.)

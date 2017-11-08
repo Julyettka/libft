@@ -38,5 +38,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		dest[i] = s1[i];
 		i++;
 	}
-	return(ft_strcat(dest, s2));
+	return (ft_strcat(dest, s2));
 }

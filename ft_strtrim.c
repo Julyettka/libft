@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/22 10:18:11 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/07 14:42:39 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/07 14:49:19 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,21 @@
 
 #include "libft.h"
 
-size_t	ft_len(const char *s)
+static size_t	ft_len(const char *s)
 {
 	size_t	len;
 
 	len = ft_strlen(s);
-	while(ft_isdelim(s[len - 1]))
+	while (ft_isdelim(s[len - 1]))
 		len--;
-	if (len == 0)
-		return (0);
-	return(len);
+	return (len);
 }
-char	*ft_strtrim(const char *s)
+
+char			*ft_strtrim(const char *s)
 {
-	char 	*dest;
-	size_t 	i;
-	size_t 	j;
+	char	*dest;
+	size_t	i;
+	size_t	j;
 	size_t	newlen;
 
 	i = 0;
@@ -58,4 +57,3 @@ char	*ft_strtrim(const char *s)
 	dest[j] = '\0';
 	return (dest);
 }
-
