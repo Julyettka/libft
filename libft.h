@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/17 10:53:58 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/05 16:09:18 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 13:59:24 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+size_t			ft_numlen(int n);
 char			*ft_itoa(int n);
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);

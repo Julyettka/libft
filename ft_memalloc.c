@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 10:51:43 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/29 16:42:03 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 13:45:32 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 void	*ft_memalloc(size_t size)
 {
 	void *str;
-	
+
 	str = (void*)malloc(sizeof(str) * (size));
 	if (!str)
 		return (NULL);

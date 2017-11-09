@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 11:15:17 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/23 11:15:18 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 14:09:26 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,33 +18,17 @@
 
 #include "libft.h"
 
-static size_t	ft_dlen(n)
-{
-	size_t 	len;
-
-	len = 1;
-	if (n < 0)
-	{
-		len++;
-		n = n * (-1);
-	}
-	while (n >= 10)
-	{
-		n = n / 10;
-		len++;
-	}
-	return (len);
-}
-
 char		*ft_itoa(int n)
 {
 	int		is_negative;
 	size_t	len;
-	char 	*str;
+	char	*str;
 
-	len = ft_dlen(n);
-	str = ft_strnew(len);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	is_negative = 0;
+	len = ft_numlen(n);
+	str = ft_strnew(len);
 	if (!str)
 		return (NULL);
 	if (n < 0)
@@ -57,8 +41,7 @@ char		*ft_itoa(int n)
 		str[len] = n % 10 + '0';
 		n = n / 10;
 	}
-	if (is_negative){
+	if (is_negative)
 		str[len + 1] = '-';
-	}
 	return (str);
 }

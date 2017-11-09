@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/22 10:07:58 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/07 12:54:37 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 13:42:15 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 	char			*newstr;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	newstr = ft_strnew(len);
 	if (!newstr)

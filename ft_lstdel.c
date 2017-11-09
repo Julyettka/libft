@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 17:16:33 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/08 20:26:21 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 13:44:35 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,11 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	t_list *pointer;
 
 	pointer = *alst;
-	while (pointer && del != NULL)
+	while (pointer && del)
 	{
 		del(pointer->content, pointer->content_size);
 		free(pointer);
-		pointer = pointer->next; 
+		pointer = pointer->next;
 	}
 	*alst = NULL;
-
 }

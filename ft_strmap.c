@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 20:02:01 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/06 21:05:07 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 13:40:53 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	size_t	len;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
 	dest = (char*)malloc(sizeof(*s) * (len + 1));

@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 18:37:26 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/06 18:46:18 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 13:28:18 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 void	ft_strdel(char **as)
 {
-	if (*as)
+	if (as)
 	{
 		free(*as);
 		*as = NULL;

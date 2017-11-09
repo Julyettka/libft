@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 14:36:54 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/23 14:40:22 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 12:09:28 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
-	ft_putchar_fd('\n', fd);
+	if (s)
+	{
+		write(fd, s, ft_strlen(s));
+		ft_putchar_fd('\n', fd);
+	}
 }

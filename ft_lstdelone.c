@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 16:57:40 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/08 20:08:06 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 12:02:26 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	if (*alst && del != NULL)
+	if (*alst && del)
 	{
 		del((*alst)->content, (*alst)->content_size);
 		free(*alst);

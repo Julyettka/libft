@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 11:53:15 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/23 11:53:16 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 13:48:15 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 #include <unistd.h>
 
 void	ft_putstr(char const *s)
-{
+{	
 	int i;
 
 	i = 0;
-	while (s[i] != '\0')
+	if (s)
 	{
-		write(1, &s[i], 1);
-		i++;
+		while (s[i] != '\0')
+			write(1, &s[i++], 1);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 20:23:18 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/06 21:08:26 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 13:50:25 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	len;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
 	dest = (char*)malloc(sizeof(*s) * (len + 1));
