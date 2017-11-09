@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/22 10:18:11 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/07 14:49:19 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 15:38:48 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 #include "libft.h"
 
-static size_t	ft_len(const char *s)
+static size_t	ft_len_aft_strimback(const char *s)
 {
 	size_t	len;
 
@@ -35,15 +35,20 @@ char			*ft_strtrim(const char *s)
 	char	*dest;
 	size_t	i;
 	size_t	j;
+	size_t	len;
 	size_t	newlen;
 
 	i = 0;
 	j = 0;
 	if (!s)
 		return (NULL);
+	len = strlen(s);
 	while (ft_isdelim(s[i]))
-		i++;
-	newlen = ft_len(s);
+			i++;
+	//printf("%zu\n", i);
+	if (len == i)
+		return (ft_strdup(""));
+	newlen = ft_len_aft_strimback(s);
 	newlen = newlen - i;
 	dest = ft_strnew(newlen);
 	if (!dest)

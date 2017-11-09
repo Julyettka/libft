@@ -6,9 +6,10 @@
 #include "../ft_tolower.c"
 #include "../ft_strcmp.c"
 #include "../ft_isdelim.c"
-//#include "../ft_strlcat.c"
 #include "../ft_atoi.c"
 #include "../ft_itoa.c"
+#include "../ft_numlen.c"
+#include "../ft_strdup.c"
 #include "../ft_strlen.c"
 #include "../ft_memccpy.c"
 #include "../ft_strtrim.c"
@@ -80,7 +81,7 @@ int main(int argc, char *argv[])
 	s3  = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
 	printf("User: ft_strtrim %s\n", ft_strtrim(s3));
 	s4 = "  \t \t \n   \n\n\n\t";
-	printf("User: ft_strtrim %s\n", ft_strtrim(s4));
+	printf("User: ft_strtrim with empty input %s\n", ft_strtrim(s4));
 
 	// ft_itoa
 	int itoa, itoa1, itoa2;
@@ -91,4 +92,5 @@ int main(int argc, char *argv[])
 	printf("User: ft_itoa %s\n", ft_itoa(itoa1));
 	printf("User: ft_itoa %s\n", ft_itoa(itoa2));
 	return (0);
+
 }
