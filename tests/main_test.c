@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "../ft_putchar.c"
 #include "../ft_tolower.c"
+#include "../ft_strlcat.c"
 #include "../ft_strcmp.c"
 #include "../ft_isdelim.c"
 #include "../ft_atoi.c"
@@ -55,6 +56,11 @@ int main(int argc, char *argv[])
 	printf("User: ft_strcmp\t %d\n", ft_strcmp(str1, str2));
 	printf("Original: strcmp\t %d\n", strcmp(str1, str2));
 
+	//ft_strlcat
+	char des[0xF00] = "there is no stars in the sky";
+	char *stl = "the cake is a lie !\0I'm hidden lol\r\n";
+	printf("User: ft_strlcat\t %zu\n", ft_strlcat(des, stl, 5));
+	printf("Original: strlcat\t %zu\n", strlcat(des, stl, 5));
 	// ft_atoi
 	char *a;
 	char *b;

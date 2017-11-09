@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/22 10:18:11 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/09 15:46:44 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/09 19:07:25 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char			*ft_strtrim(const char *s)
 	j = 0;
 	if (!s)
 		return (NULL);
-	len = strlen(s);
+	len = ft_strlen(s);
 	while (ft_isdelim(s[i]))
 		i++;
 	if (len == i)
