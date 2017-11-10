@@ -1,7 +1,6 @@
-#include "../libft.h"
-
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "../ft_putchar.c"
 #include "../ft_tolower.c"
 #include "../ft_strlcat.c"
@@ -16,18 +15,13 @@
 #include "../ft_strtrim.c"
 #include "../ft_strnew.c"
 #include "../ft_bzero.c"
+#include "../ft_strrev.c"
 
 int	ft_atoi(const char *str);
 
 
-int main(int argc, char *argv[])
+int main(void)
 {
-
-	int ar;
-	char **argum;
-
-	ar = argc;
-	argum = argv;
 	// ft_memccpy
 	char s1[16] = "";
 	char s2[15] = "collect at my";
@@ -71,7 +65,6 @@ int main(int argc, char *argv[])
 	b = "-9999999999999999999999999999";
 	c = "46976209";
 	d = "386saf";
-
 	printf("User: ft_atoi\t %d\n", ft_atoi(a));
 	printf("Original: atoi\t %d\n", atoi(a));
 	printf("User: ft_atoi\t %d\n", ft_atoi(b));
@@ -97,6 +90,12 @@ int main(int argc, char *argv[])
 	printf("User: ft_itoa %s\n", ft_itoa(itoa));
 	printf("User: ft_itoa %s\n", ft_itoa(itoa1));
 	printf("User: ft_itoa %s\n", ft_itoa(itoa2));
+
+	//ft_strrev
+	char string[] = "abcdefg!?";
+	printf("Normal output ft_strrev: %s\n", string);
+	printf("Reverse output ft_strrev: %s\n", ft_strrev(string));
+
 	return (0);
 
 }
