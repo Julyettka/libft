@@ -6,13 +6,13 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 21:40:20 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/10 11:00:30 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/10 12:59:36 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrev(char *str)
+char	*ft_strrev(char *str)
 {
 	size_t	i;
 	size_t	j;

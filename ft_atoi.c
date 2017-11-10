@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 09:48:45 by imelnych          #+#    #+#             */
-/*   Updated: 2017/10/21 09:48:46 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/10 18:12:11 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	int is_negative;
-	int num;
+	int 		i;
+	int 		is_negative;
+	long long	num;
+	size_t		numlength;
 
 	i = 0;
 	is_negative = 0;
@@ -36,8 +37,9 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	if (is_negative)
-		num = -num;
-	if (num > 2147483647 || num < -2147483648)
-		return (0);
+		num = num * (-1);
+	numlength = ft_numlen(num);
+	if (numlength >= 19 || num > 9223372036854775807)
+		return ((is_negative) ? -1 : 0);
 	return (num);
 }

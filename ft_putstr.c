@@ -6,15 +6,14 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 11:53:15 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/09 13:48:15 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/10 14:51:02 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr(char const *s)
-{	
+{
 	int i;
 
 	i = 0;

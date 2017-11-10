@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/17 10:53:58 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/09 19:00:33 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/10 15:01:23 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
-# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
@@ -63,6 +64,7 @@ char			**ft_strsplit(char const *s, char c);
 int				ft_wordcount(char const *s, char c);
 int				ft_letters_length(char const *s, char c);
 size_t			ft_numlen(int n);
+char			*ft_strrev(char *str);
 char			*ft_itoa(int n);
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);

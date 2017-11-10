@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:30:17 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/09 17:35:39 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/10 14:56:45 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int	ft_wordcount(char const *str, char c)
 	{
 		while (str[i] == c)
 			i++;
-		if (str[i] != c && str[i] !='\0')
+		if (str[i] != c && str[i] != '\0')
 			words++;
-		while (str[i] != c && str[i] !='\0')
+		while (str[i] != c && str[i] != '\0')
 			i++;
 	}
 	return (words);

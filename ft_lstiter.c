@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 10:15:12 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/09 11:46:28 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/10 17:41:41 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	if (f)
+	if (f && lst)
 	{
 		while (lst)
 		{

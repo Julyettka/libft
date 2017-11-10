@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:54:13 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/09 14:03:38 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/10 14:50:23 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 size_t	ft_numlen(int n)
 {
-	size_t 	len;
+	size_t	len;
 
 	len = 1;
 	if (n < 0)
