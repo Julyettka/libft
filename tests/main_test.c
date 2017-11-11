@@ -62,17 +62,17 @@ int main(void)
 	char *d;
 
 	a = " balf120";
-	b = "-9999999999999999999999999999";
-	c = "46976209";
+	b = "9999999999999999999999999999";
+	c = "-9999999999999999999999999999";
 	d = "386saf";
-	printf("User: ft_atoi\t %d\n", ft_atoi(a));
-	printf("Original: atoi\t %d\n", atoi(a));
-	printf("User: ft_atoi\t %d\n", ft_atoi(b));
-	printf("Original: atoi\t %d\n", atoi(b));
-	printf("User: ft_atoi\t %d\n", ft_atoi(c));
-	printf("Original: atoi\t %d\n", atoi(c));
-	printf("User: ft_atoi\t %d\n", ft_atoi(d));
-	printf("Original: atoi\t %d\n", atoi(d));
+	// printf("User: ft_atoi\t %d\n", ft_atoi(a));
+	// printf("Original: atoi\t %d\n", atoi(a));
+	printf("User: ft_atoi: testing max values: \t %d\n", ft_atoi(b));
+	printf("Original: atoi: testing max values: \t %d\n", atoi(b));
+	printf("User: ft_atoi: testing min values:\t %d\n", ft_atoi(c));
+	printf("Original: atoi: testing min values:\t %d\n", atoi(c));
+	// printf("User: ft_atoi\t %d\n", ft_atoi(d));
+	// printf("Original: atoi\t %d\n", atoi(d));
 
 	// ft_strtrim
 	char *s3;
