@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/19 11:07:44 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/11 15:49:41 by imelnych         ###   ########.fr       */
+/*   Created: 2017/10/22 10:18:11 by imelnych          #+#    #+#             */
+/*   Updated: 2018/03/21 11:41:26 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** The strdup() function allocates sufficient memory for a copy of the
-** string s1, does the copy, and returns a pointer to it. The pointer may
-** subsequently be used as an argument to the function free(3).
-*/
-
-char	*ft_strdup(const char *s1)
+char	*ft_strjoin_free(char *s1, char *s2, int opt)
 {
-	int		i;
-	size_t	len;
-	char	*dest;
+	size_t		len_s1;
+	size_t		len_s2;
+	char		*dest;
+	size_t		i;
+	size_t		j;
 
-	i = 0;
-	len = ft_strlen(s1);
-	dest = (char*)malloc(sizeof(*dest) * (len + 1));
+	i = -1;
+	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	dest = ft_strnew(len_s1 + len_s2);
 	if (!dest)
 		return (NULL);
-	while (s1[i] != '\0')
-	{
+	while (s1[++i])
 		dest[i] = s1[i];
-		i++;
-	}
+	while (s2[j])
+		dest[i++] = s2[j++];
 	dest[i] = '\0';
+	if (opt == 1 || opt == 3)
+		free(s1);
+	if (opt == 2 || opt == 3)
+		free(s2);
 	return (dest);
 }

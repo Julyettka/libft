@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 19:55:21 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/09 13:35:30 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/11 15:33:16 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int i;
 
 	i = 0;
-	if (s)
+	if (s && f)
 	{
 		while (s[i] != 0)
 		{

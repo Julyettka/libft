@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_arrdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/21 15:21:34 by imelnych          #+#    #+#             */
-/*   Updated: 2018/03/19 18:49:15 by imelnych         ###   ########.fr       */
+/*   Created: 2018/03/13 12:46:12 by imelnych          #+#    #+#             */
+/*   Updated: 2018/03/21 12:20:30 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Allocates (with malloc(3)) and returns a “fresh” string ending
-** with ’\0’. Each character of the string is initialized at
-** ’\0’. If the allocation fails the function returns NULL.
-*/
-
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+void	ft_arrdel(char ***arr)
 {
-	char *str;
+	char	**tmp;
 
-	str = (char*)malloc(sizeof(char) * size + 1);
-	if (!str)
-		return (NULL);
-	ft_bzero(str, size + 1);
-	return (str);
+	tmp = *arr;
+	while (*tmp)
+	{
+		free(*tmp);
+		tmp++;
+	}
+	free(*arr);
+	*arr = NULL;
 }

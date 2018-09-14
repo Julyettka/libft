@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 10:22:48 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/10 17:54:32 by imelnych         ###   ########.fr       */
+/*   Updated: 2018/03/21 12:22:19 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,47 @@
 */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	**ft_strsplit(char const *s, char c)
+static int	ft_wordcount(char const *str, char c)
+{
+	int words;
+	int i;
+
+	words = 0;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		while (str[i] == c)
+			i++;
+		if (str[i] != c && str[i] != '\0')
+			words++;
+		while (str[i] != c && str[i] != '\0')
+			i++;
+	}
+	return (words);
+}
+
+static int	ft_letters_length(char const *s, char c)
+{
+	int len;
+	int i;
+
+	len = 0;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			i++;
+		else
+		{
+			len++;
+			i++;
+		}
+	}
+	return (len);
+}
+
+char		**ft_strsplit(char const *s, char c)
 {
 	char	**array;
 	int		i;
@@ -31,7 +69,7 @@ char	**ft_strsplit(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (!(array = (char**)malloc(sizeof(*array) * ft_wordcount(s, c) + 1)))
+	if (!(array = (char**)malloc(sizeof(char*) * ft_wordcount(s, c) + 1)))
 		return (NULL);
 	j = 0;
 	while (i < ft_wordcount(s, c))

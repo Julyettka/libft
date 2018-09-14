@@ -6,12 +6,11 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 18:37:26 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/09 13:28:18 by imelnych         ###   ########.fr       */
+/*   Updated: 2018/03/19 18:51:14 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 /*
 ** Takes as a parameter the address of a string that need to be

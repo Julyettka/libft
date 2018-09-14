@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_atoibase.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/21 15:21:34 by imelnych          #+#    #+#             */
-/*   Updated: 2018/03/19 18:49:15 by imelnych         ###   ########.fr       */
+/*   Created: 2018/01/25 16:07:53 by imelnych          #+#    #+#             */
+/*   Updated: 2018/03/21 11:40:38 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Allocates (with malloc(3)) and returns a “fresh” string ending
-** with ’\0’. Each character of the string is initialized at
-** ’\0’. If the allocation fails the function returns NULL.
-*/
-
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+int	ft_atoibase(char *str)
 {
-	char *str;
+	int i;
+	int j;
+	int res;
 
-	str = (char*)malloc(sizeof(char) * size + 1);
-	if (!str)
-		return (NULL);
-	ft_bzero(str, size + 1);
-	return (str);
+	j = 1;
+	res = 0;
+	i = ft_strlen(str);
+	while (--i >= 0)
+	{
+		res += j * (str[i] - '0');
+		j *= 2;
+	}
+	return (res);
 }

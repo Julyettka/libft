@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 10:19:49 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/10 17:50:50 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/11 15:30:07 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,11 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list *new;
 
-	new = f(lst);
+	new = NULL;
 	if (lst)
+	{
+		new = f(lst);
 		new->next = ft_lstmap(lst->next, f);
+	}
 	return (new);
 }

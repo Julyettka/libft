@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   check_type.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/21 15:21:34 by imelnych          #+#    #+#             */
-/*   Updated: 2018/03/19 18:49:15 by imelnych         ###   ########.fr       */
+/*   Created: 2018/01/05 15:18:07 by imelnych          #+#    #+#             */
+/*   Updated: 2018/03/21 11:40:44 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Allocates (with malloc(3)) and returns a “fresh” string ending
-** with ’\0’. Each character of the string is initialized at
-** ’\0’. If the allocation fails the function returns NULL.
-*/
-
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+int	check_type(char c)
 {
-	char *str;
+	int i;
 
-	str = (char*)malloc(sizeof(char) * size + 1);
-	if (!str)
-		return (NULL);
-	ft_bzero(str, size + 1);
-	return (str);
+	i = 0;
+	while (TP[i])
+	{
+		if (c == TP[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+int	check_flags(char c)
+{
+	int i;
+
+	i = 0;
+	while (FLAGS[i])
+	{
+		if (c == FLAGS[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }

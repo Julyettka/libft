@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/21 09:48:45 by imelnych          #+#    #+#             */
-/*   Updated: 2017/11/11 11:06:25 by imelnych         ###   ########.fr       */
+/*   Updated: 2017/11/11 14:54:35 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@ int	ft_atoi(const char *str)
 	int		numlen;
 
 	i = 0;
-	is_negative = 0;
 	num = 0;
 	numlen = 0;
 	while (ft_isdelim(str[i]))
 		i++;
-	if (str[i] == '-')
-		is_negative = 1;
+	is_negative = (str[i] == '-') ? 1 : 0;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	if (str[i] < 48 || str[i] > 57)
@@ -34,12 +32,10 @@ int	ft_atoi(const char *str)
 	while (str[i] >= 48 && str[i] <= 57)
 	{
 		num = num * 10;
-		num = num + str[i] - '0';
-		i++;
+		num = num + str[i++] - '0';
 		numlen++;
 	}
-	if (is_negative)
-		num = num * (-1);
+	num = (is_negative) ? num * (-1) : num;
 	if (numlen > 19 || num > 9223372036854775807)
 		return ((is_negative) ? 0 : -1);
 	return ((int)num);
