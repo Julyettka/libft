@@ -54,7 +54,7 @@ Personal C Library
 | ft_strtrim    | char \*ft_strtrim(char const \*s) |Returns a 'fresh' string without whitespaces at the beginning and at the end|
 | ft_strsplit   | char \*\*ft_strsplit(char const \*s, char c) |Returns a 'fresh' array of strings, made from the split of a string|
 | ft_itoa       | char \*ft_itoa(int n) |Returns a 'fresh' string that represents an int value|
-| ft_putchar    | void ft_putchar(char c) |Writes a character to stdout| 
+| ft_putchar    | void ft_putchar(char c) |Writes a character to stdout|
 | ft_putstr     | void ft_putstr(char const \*s) |Writes a string to stdout|
 | ft_putendl    | void ft_putendl(char const \*s) |Writes a string followed by a newline to stdout|
 | ft_putnbr     | void ft_putnbr(int n) |Writes an int to the stdout|
@@ -87,7 +87,7 @@ typedef struct  s_list
 | ft_lstmap     | t_list \*ft_lstmap(t_list \*lst, t_list \*(\*f)(t_list \*elem)) |Iterates a list and applies f() to each node to create a new list|
 
 ### Extra functions
-Functions I found useful: 
+Functions I found useful:
 
 
 | Function Name | Prototype     | Utility  |
@@ -98,5 +98,11 @@ Functions I found useful:
 | ft_strrev.c | char *ft_strrev(char *str) | Reverse the string without allocating memory |
 | ft_arrnew.c | char **ft_arrnew(size_t y, size_t x) | Allocates memory for a two-dimensional array (x, y)|
 | ft_arrdel.c | void ft_arrdel(char ***arr) | Frees a two-dimensional array |
+
+### Get next line
+
+| Function Name | Prototype     | Utility  |
+| ------------- |---------------| ---------|
+| get_next_line.c | int get_next_line(const int fd, char **line)| gets each new line from file/stdi |
 
 ### MD Credit: Matt Hurd

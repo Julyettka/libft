@@ -6,7 +6,7 @@
 /*   By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/17 10:53:58 by imelnych          #+#    #+#             */
-/*   Updated: 2018/03/21 12:26:35 by imelnych         ###   ########.fr       */
+/*   Updated: 2018/09/19 05:44:02 by imelnych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
 
 /*
 ** Color palette for ft_printf
@@ -26,6 +27,12 @@
 # define YELLOW "\033[1;33m"
 # define LBLUE "\033[1;36m"
 # define RESET "\033[0m"
+
+/*
+** Buff size for gnl
+*/
+
+# define BUFF_SIZE 100
 
 /*
 ** Standart libft functions
@@ -109,5 +116,6 @@ size_t			ft_numlen(int n);
 char			*ft_strrev(char *str);
 char			**ft_arrnew(size_t y, size_t x);
 void			ft_arrdel(char ***arr);
+int				get_next_line(const int fd, char **line);
 
 #endif

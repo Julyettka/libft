@@ -6,7 +6,7 @@
 #    By: imelnych <imelnych@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/07 13:34:52 by imelnych          #+#    #+#              #
-#    Updated: 2018/03/21 11:42:21 by imelnych         ###   ########.fr        #
+#    Updated: 2018/09/19 05:48:26 by imelnych         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC_files = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 		ft_putnbr_fd.c ft_strrev.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
 		ft_lstadd.c ft_lstiter.c ft_lstmap.c  ft_isdelim.c \
-		ft_arrnew.c ft_arrdel.c ft_isdigit_char.c ft_numlen.c
+		ft_arrnew.c ft_arrdel.c ft_isdigit_char.c ft_numlen.c get_next_line.c
 
 OBJ_files = $(SRC_files:.c=.o)
 OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_files))
